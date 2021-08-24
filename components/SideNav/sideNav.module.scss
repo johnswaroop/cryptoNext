@@ -1,0 +1,44 @@
+@import "./../../scss/variables";
+.sideNav{
+    transition: margin 0.35s ease-in-out;
+    display: flex;
+    position: fixed;
+    flex-direction: column;
+    height: $content-heigth;
+    width: $side-nav-width;
+    z-index: 50;
+    left: 0;
+    top: 0;
+    background-color: var(--sideNav-bg);
+    margin-top: $nav-height;
+    border-right: 1px solid var(--side-nav-border);
+    border-top: 1px solid var(--side-nav-border);
+    padding-top: 0.75rem;
+    
+    .entry{
+        display: flex;
+        align-items: center;
+        padding: 1rem 1.25rem;
+        margin: 0.5rem 0;
+        img{
+            object-fit: contain;
+            
+            width: 1.25rem;
+        }
+        p{
+            font-family: $font;
+            margin: 0;
+            margin-left: 1.5rem;
+            color: var(--text-color);
+        }
+
+        &:hover{
+          background-color: #ffffffa4;
+        }
+    }
+
+    @media only screen and (max-width: 1420px) {
+        transition: all 0.35s ease-in-out;
+        margin-left: -1 * $side-nav-width;
+    }
+}

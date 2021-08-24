@@ -1,0 +1,73 @@
+@import "./../../scss/variables";
+
+.nav {
+    display: flex;
+    width: 100%;
+    height: $nav-height;
+    background: var(--bg-nav);
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
+    align-items: center;
+    position: fixed;
+    @media only screen and (max-width: 910px) {
+        height: $nav-height+1.5vh;
+      }
+}
+
+.routes {
+    display: flex;
+    list-style: none;
+    font-family: $font;
+    font-weight: 500;
+    font-size: 16px;
+    color: var(--text-color);
+    padding: 0;
+
+    li {
+        margin: 0 1.5rem;
+        cursor: pointer;
+    }
+
+    .activeRoute {
+        color: var(--highlight-text-color);
+    }
+
+    @media only screen and (max-width: 910px) {
+        li{
+            font-size: 1rem;
+        }
+      }
+
+}
+
+.logo {
+    display: flex;
+    margin: 0 1rem;
+}
+
+.walletBtn {
+    background: var(--bg-wallet);
+    border-radius: 8px;
+    border: none;
+    font-family: $font;
+    color: var(--highlight-text-color);
+    font-weight: 500;
+    height: 60%;
+    padding: 0 1rem;
+    margin-left: auto;
+    font-size: 14px;
+}
+
+.language {
+    width: 2rem;
+    height: 70%;
+    border: none;
+    background-color: var(--bg-panel);
+    margin: 0 1rem;
+    border-radius: 8px;
+}
+
+.darkModeIcon {
+    display: flex;
+    height: 2rem;
+    padding-left: 0.5rem;
+}

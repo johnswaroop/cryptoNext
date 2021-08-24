@@ -1,0 +1,182 @@
+@import "./../../scss/variables.scss";
+
+.manage {
+    display: flex;
+    margin-top: 3rem;
+    overflow: hidden;
+    background-color: var(--bg-panel);
+    border-radius: 30px;
+    flex-direction: column;
+    width: max-content;
+}
+
+.header {
+    display: flex;
+    width: 100%;
+    height: 3rem;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--bg-manage-header);
+    h1 {
+        font-size: 1.25rem;
+        font-family: $font;
+        color: var(--highlight-text-color);
+        font-weight: 400;
+    }
+}
+
+.form {
+    display: flex;
+    width: max-content;
+    height: 100%;
+    padding: 1.5rem 2rem;
+    flex-direction: column;
+}
+
+.row {
+    display: flex;
+}
+
+.manageRowOne {
+    @extend .row;
+    justify-content: space-between;
+}
+
+.panel {
+    background-color: var(--bg-manage-panel);
+    box-sizing: border-box;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.08);
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    height: max-content;
+    padding: 1rem 1.75rem;
+    z-index: 100;
+}
+
+.panelTitle {
+    font-family: $font;
+    color: var(--highlight-text-color);
+    margin: 0;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+.panel1 {
+    @extend .panel;
+    margin: 0 0.5rem;
+}
+
+.panel2 {
+    @extend .panel;
+    margin: 0 0.5rem;
+}
+
+.panel3 {
+    background-color: var(--bg-manage-panel);
+    box-sizing: border-box;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.08);
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    padding: 0.75rem 1.25rem;
+    margin: 0 0.5rem;
+    margin-top: 1.25rem;
+}
+
+.panel4 {
+    @extend .panel3;
+    margin: 1rem 0.5rem;
+    border-radius: 15px;
+    overflow: hidden;
+    padding: 0;
+}
+
+.field {
+    display: flex;
+    flex-direction: column;
+    font-family: $font;
+    padding: 0.75rem;
+    padding-left: 0;
+}
+
+.key {
+    margin: 0;
+    font-size: 0.75rem;
+    color: var(--text-color);
+    font-weight: 400;
+    font-family: $font;
+}
+.value {
+    margin: 0;
+    font-weight: 500;
+    margin-top: 0.5rem;
+    color: var(--bw-text);
+    font-size: 0.95rem;
+    font-family: $font;
+}
+
+.colLeft {
+    min-width: 9rem;
+}
+
+.valueLink {
+    @extend .value;
+    margin: 0;
+}
+
+.panelHead {
+    display: flex;
+    padding: 0.7rem 1rem;
+    align-items: center;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.08);
+    img {
+        height: 2rem;
+    }
+    h3 {
+        margin: 0;
+        margin-left: 1.5rem;
+        font-family: $font;
+        font-weight: 500;
+    }
+
+    .arrow {
+        display: flex;
+        height: 0.75rem;
+        margin-left: auto;
+    }
+}
+
+.panelBody {
+    box-sizing: border-box;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    height: max-content;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    border-top-right-radius: 0;
+    border-top-left-radius: 0;
+    padding: 1rem 1.25rem;
+}
+
+.btn {
+    background-color: var(--bg-panel);
+    border: 3px solid var(--border-color);
+    border-radius: 30px;
+    font-size: 1.2rem;
+    color: var(--highlight-text-color);
+    box-shadow: 0 0 15px rgb(211, 211, 211);
+    font-weight: 600;
+    padding: 0.4rem 1rem;
+}
+
+.depositToken {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    p {
+        margin-left: 1.75rem;
+    }
+}
